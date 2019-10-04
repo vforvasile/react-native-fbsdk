@@ -22,9 +22,4 @@ Pod::Spec.new do |s|
     ss.dependency     'FBSDKLoginKit', '= 5.8'
     ss.source_files = 'ios/RCTFBSDK/login/*.{h,m}'
   end
-
-  s.subspec 'Share' do |ss|
-    ss.dependency     'FBSDKShareKit', '= 5.8'
-    ss.source_files = 'ios/RCTFBSDK/share/*.{h,m}'
-  end
 end
