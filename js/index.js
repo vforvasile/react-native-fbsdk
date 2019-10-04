@@ -24,26 +24,12 @@
 'use strict';
 
 module.exports = {
-  //native models
-  get ShareOpenGraphAction() {
-    return require('./models/FBShareOpenGraphAction');
-  },
-  get ShareOpenGraphObject() {
-    return require('./models/FBShareOpenGraphObject');
-  },
-  get ShareOpenGraphValueContainer() {
-    return require('./models/FBShareOpenGraphValueContainer');
-  },
-
   //native modules
   get AccessToken() {
     return require('./FBAccessToken');
   },
   get AppEventsLogger() {
     return require('./FBAppEventsLogger');
-  },
-  get GameRequestDialog() {
-    return require('./FBGameRequestDialog');
   },
   get GraphRequest() {
     return require('./FBGraphRequest');
@@ -53,25 +39,5 @@ module.exports = {
   },
   get LoginManager() {
     return require('./FBLoginManager');
-  },
-  get MessageDialog() {
-    return require('./FBMessageDialog');
-  },
-  get ShareApi() {
-    return require('./FBShareApi');
-  },
-  get ShareDialog() {
-    return require('./FBShareDialog');
-  },
-
-  //native components
-  get LoginButton() {
-    return require('./FBLoginButton');
-  },
-  get SendButton() {
-    return require('./FBSendButton');
-  },
-  get ShareButton() {
-    return require('./FBShareButton');
   },
 };
