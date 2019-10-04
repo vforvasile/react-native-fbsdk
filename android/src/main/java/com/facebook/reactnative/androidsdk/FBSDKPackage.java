@@ -26,6 +26,7 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewManager;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class FBSDKPackage implements ReactPackage {
@@ -38,21 +39,13 @@ public class FBSDKPackage implements ReactPackage {
         return Arrays.<NativeModule>asList(
                 new FBAccessTokenModule(reactContext),
                 new FBAppEventsLoggerModule(reactContext),
-                new FBGameRequestDialogModule(reactContext, mActivityEventListener),
                 new FBGraphRequestModule(reactContext),
-                new FBLoginManagerModule(reactContext, mActivityEventListener),
-                new FBMessageDialogModule(reactContext, mActivityEventListener),
-                new FBShareAPIModule(reactContext),
-                new FBShareDialogModule(reactContext, mActivityEventListener)
+                new FBLoginManagerModule(reactContext, mActivityEventListener)
         );
     }
 
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
-        return Arrays.<ViewManager>asList(
-                new FBLoginButtonManager(reactContext),
-                new FBSendButtonManager(),
-                new FBShareButtonManager()
-        );
+        return Collections.emptyList();
     }
 }
