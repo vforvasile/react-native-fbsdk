@@ -14,12 +14,12 @@ Pod::Spec.new do |s|
   s.dependency      'React'
 
   s.subspec 'Core' do |ss|
-    ss.dependency     'FBSDKCoreKit', '= 5.8'
+    ss.dependency     'FBSDKCoreKit', '= 5.13.1'
     ss.source_files = 'ios/RCTFBSDK/core/*.{h,m}'
   end
 
   s.subspec 'Login' do |ss|
-    ss.dependency     'FBSDKLoginKit', '= 5.8'
+    ss.dependency     'FBSDKLoginKit', '= 5.13.1'
     ss.source_files = 'ios/RCTFBSDK/login/*.{h,m}'
   end
 end
